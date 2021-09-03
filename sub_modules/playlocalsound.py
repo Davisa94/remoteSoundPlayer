@@ -24,6 +24,7 @@ def playLocalFile(filename):
     # sound = AudioSegment.from_mp3(path)
     playsound(path)
     # play(sound)
+    return f"Finished playing {path}"
 
 playLocalFile("bestcrie.mp3")
 # TODO: add a loop that tries to play the filename without extension given an extensionless filename
