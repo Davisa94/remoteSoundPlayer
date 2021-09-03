@@ -6,12 +6,15 @@ import os
 
 # given the filename return the appropriate path:
 def filenameToPath(filename):
+    # Get current directory
     cwd = os.getcwd()
-    print(cwd)
+    # Go up a folder
     cwd = cwd.split("\sub_modules")
     cwd = cwd[0]
+    # Convert backslashes to forward slashes
     cwd = cwd.replace("\\", "/")
-    print( f"{cwd}/{filename}")
+    # append the filename onto the path and print that it is playing
+    print( f"Now playing: {cwd}/{filename}")
     return f"{cwd}/{filename}"
     # return filename
 
