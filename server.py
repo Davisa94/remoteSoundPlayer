@@ -1,6 +1,5 @@
 import time
 import multiprocessing
-from playsound import play
 
 
 def main():
