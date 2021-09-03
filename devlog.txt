@@ -7,3 +7,4 @@ The first audio library had issues playing bestcry.mp3 I assume it is either an 
 after some investigation it was in issue with ffmpeg not being installed;
 After much tinkering it seems that absolute paths works much more consistently than relative paths and so switching to that is the course I shall take.
 There is an issue with the process looping
+Start researching asyncio library and see if it can handle the needs of the application
