@@ -1,7 +1,10 @@
 import time
+import multiprocessing
+from playsound import play
 
 
-main()
+def main():
+    print("in main")
 
 
 

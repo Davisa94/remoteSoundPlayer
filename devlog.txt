@@ -1,4 +1,5 @@
 Thursday Sep2: The project start:
 The goal is to have a server that can be called by a script run by a chatbot to play sound files on a stremers pc from a second managing PC running the chatbot.
 The first technical defficencies that need to be overcome are learning parelelism in python and learning aysynchronous programming in python.
-instead of adding sources for EVERY SINGLE FILE now the python script can be run in the sounds folder and it will wait for triggers to come in from the bot to play the correct sound
+instead of adding sources for EVERY SINGLE FILE now the python script can be run in the sounds folder and it will wait for triggers to come in from the bot to play the correct sound.
+because this is my first time doing so with python. I am going to write a few test functions
