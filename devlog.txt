@@ -4,3 +4,5 @@ The first technical defficencies that need to be overcome are learning parelelis
 instead of adding sources for EVERY SINGLE FILE now the python script can be run in the sounds folder and it will wait for triggers to come in from the bot to play the correct sound.
 because this is my first time doing so with python. I am going to write a few test functions
 The first audio library had issues playing bestcry.mp3 I assume it is either an encoding issue or a length issue. trying a different audio lib since the first one cant open some files
+after some investigation it was in issue with ffmpeg not being installed;
+After much tinkering it seems that absolute paths works much more consistently than relative paths and so switching to that is the course I shall take.
