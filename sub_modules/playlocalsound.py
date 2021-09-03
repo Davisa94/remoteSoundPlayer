@@ -7,8 +7,8 @@ def filenameToPath(filename):
 
 
 def play(filename):
-    playsound(filename)
+    path = filenameToPath(filename)
+    playsound(path)
 
 
-
-play("../beans.mp3")
+# TODO: add a loop that tries to play the filename without extension given an extensionless filename
