@@ -15,6 +15,7 @@ class HandleSongRequest():
     def playSong(filename):
         # strip the qoutes
         filename = filename.strip("\"")
+        filename = filename.strip("%22")
         pls.playLocalFile(filename)
         # print(f"Playing song: {filename}")
 
@@ -35,7 +36,14 @@ class S(BaseHTTPRequestHandler):
         post_data = self.rfile.read(content_length) # <--- Gets the data itself
         logging.info("POST request,\nPath: %s\nHeaders:\n%s\n\nBody:\n%s\n",
                 str(self.path), str(self.headers), post_data.decode('utf-8'))
-        req_list = post_data.decode('utf-8').split(':')
+
+        decoded_data = post_data.decode('utf-8')
+        # if it is : seperated:
+        if ":" in decoded_data:
+            req_list = decoded_data.split(':')
+        # If it is = seperated
+        if "=" in decoded_data:
+            req_list = decoded_data.split('=')
         print(f"post-DATA : : : {req_list[1]}")
         HandleSongRequest.playSong(req_list[1])
         print(f"post-DATA : : : {self.rfile}")

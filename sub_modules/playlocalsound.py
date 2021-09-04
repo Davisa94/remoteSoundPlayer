@@ -14,8 +14,9 @@ def filenameToPath(filename):
     # Convert backslashes to forward slashes
     cwd = cwd.replace("\\", "/")
     # append the filename onto the path and print that it is playing
-    print( f"Now playing: {cwd}/{filename}")
-    return f"{cwd}/{filename}"
+    finalPath = f"{cwd}/{filename}"
+    print( f"Now playing: {finalPath}")
+    return finalPath
     # return filename
 
 
