@@ -21,5 +21,5 @@ class HandleRequests(BaseHTTPRequestHandler):
         self.do_POST()
 
 host = ''
-port = 80
+port = 8080
 HTTPServer((host, port), HandleRequests).serve_forever()
