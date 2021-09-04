@@ -16,7 +16,7 @@ class HandleSongRequest():
         # strip the qoutes
         filename = filename.strip("\"")
         filename = filename.strip("%22")
-        pls.playLocalFile(filename)
+        pls.playLocalFileSystem(filename)
         # print(f"Playing song: {filename}")
 
 
