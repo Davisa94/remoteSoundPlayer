@@ -34,5 +34,3 @@ def playLocalFileSystem(filename):
     path = filenameToPath(filename)
     os.system(path)
 # TODO: add a loop that tries to play the filename without extension given an extensionless filename
-
-playLocalFileSystem("beans.mp3")
