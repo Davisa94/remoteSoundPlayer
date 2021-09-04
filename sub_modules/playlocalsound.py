@@ -19,6 +19,10 @@ def filenameToPath(filename):
     return finalPath
     # return filename
 
+def playLocalFilePyDub(filename):
+    path = filenameToPath(filename)
+    song = AudioSegment.from_mp3(path)
+    play(song)
 
 def playLocalFile(filename):
     path = filenameToPath(filename)
@@ -26,4 +30,9 @@ def playLocalFile(filename):
     playsound(path)
     # play(sound)
     return f"Finished playing {path}"
+def playLocalFileSystem(filename):
+    path = filenameToPath(filename)
+    os.system(path)
 # TODO: add a loop that tries to play the filename without extension given an extensionless filename
+
+playLocalFileSystem("beans.mp3")
