@@ -16,7 +16,7 @@ def mpMethod():
     bestCryProcess.join()
 
 def run_server():
-    sm.S.run()
+    sm.run()
 
 def main():
     # with concurrent.futures.ProcessPoolExecutor as executor:

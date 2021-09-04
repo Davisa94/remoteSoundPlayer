@@ -11,8 +11,10 @@ from . import playlocalsound as pls
 class HandleSongRequest():
     def __init__(self):
         self.body = ""
-    
+
     def playSong(filename):
+        # strip the qoutes
+        filename = filename.strip("\"")
         pls.playLocalFile(filename)
         # print(f"Playing song: {filename}")
 
