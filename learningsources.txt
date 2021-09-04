@@ -1,3 +1,8 @@
 Learning syntax for parelelism:
 https://www.youtube.com/watch?v=fKl2JW_qrso&ab_channel=CoreySchafer
 
+asyncio:
+https://www.youtube.com/watch?v=t5Bo1Je9EmE&ab_channel=TechWithTim
+
+Basic post handling for data requests:
+https://riptutorial.com/python/example/26748/basic-handling-of-get--post--put-using-basehttprequesthandler
