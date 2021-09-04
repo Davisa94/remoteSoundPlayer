@@ -12,3 +12,4 @@ Start researching asyncio library and see if it can handle the needs of the appl
 Friday Sep3:
 Project structure design:
 Server running on OBS PC within folder containing sounds, accepts POST requests to play a sound and plays them <- bot runs a small script that sends off the post request when the sound is triggered.
+For the MVP we are moving to a single python file without paralellism.

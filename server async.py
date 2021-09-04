@@ -4,7 +4,7 @@ import concurrent.futures
 import importlib
 import asyncio
 # importlib.import_module("playlocalsound")
-from sub_modules import playlocalsound as pls
+from sub_modules import servermodulev2 as sm
 
 def mpMethod():
     print("in main")
@@ -15,12 +15,14 @@ def mpMethod():
     beansProcess.join()
     bestCryProcess.join()
 
+def run_server():
+    sm.S.run()
 
 def main():
     # with concurrent.futures.ProcessPoolExecutor as executor:
     #     future1 = executor.submit(pls.playLocalFile, "bruh.mp3")
     #     print(future1.result())
-    mpMethod()
+    run_server()
 
 if __name__ == "__main__":
     main()

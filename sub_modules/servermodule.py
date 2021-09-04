@@ -13,7 +13,7 @@ class HandleRequests(BaseHTTPRequestHandler):
     def do_POST(self):
         '''Reads post request body'''
         self._set_headers()
-        content_len = int(self.headers.getheader('content-length', 0))
+        content_len = int(self.getheader('content-length', 0))
         post_body = self.rfile.read(content_len)
         self.wfile.write("received post request:<br>{}".format(post_body))
 
