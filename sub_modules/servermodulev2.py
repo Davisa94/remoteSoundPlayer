@@ -13,7 +13,7 @@ class HandleSongRequest():
         filename = filename.strip("%22")
         playProcess = multiprocessing.Process(target=pls.playLocalFileSystem, args=[filename])
         playProcess.start()
-        playProcesss.join()
+        playProcess.join()
         # print(f"Playing song: {filename}")
 
 
