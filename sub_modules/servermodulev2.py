@@ -15,6 +15,12 @@ class HandleSongRequest():
         playProcess.start()
         playProcess.join()
         # print(f"Playing song: {filename}")
+    def playSongPyDub(filename):
+        filename = filename.strip("\"")
+        filename = filename.strip("%22")
+        playProcess = multiprocessing.Process(target=pls.playLocalFilePyDub, args=[filename])
+        playProcess.start()
+        playProcess.join()
 
 
 class S(BaseHTTPRequestHandler):
@@ -42,7 +48,7 @@ class S(BaseHTTPRequestHandler):
         if "=" in decoded_data:
             req_list = decoded_data.split('=')
         print(f"post-DATA : : : {req_list[1]}")
-        HandleSongRequest.playSong(req_list[1])
+        HandleSongRequest.playSongPyDub(req_list[1])
         print(f"post-DATA : : : {self.rfile}")
         self._set_response()
         self.wfile.write("POST request for {}".format(self.path).encode('utf-8'))
