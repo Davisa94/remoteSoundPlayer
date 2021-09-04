@@ -3,6 +3,7 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 import logging
 from . import playlocalsound as pls
 
+""
 class HandleSongRequest():
     def __init__(self):
         self.body = ""
