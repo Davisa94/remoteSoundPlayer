@@ -1,9 +1,4 @@
-#!/usr/bin/env python3
-"""
-Very simple HTTP server in python for logging requests
-Usage::
-    ./server.py [<port>]
-"""
+import multiprocessing
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import logging
 from . import playlocalsound as pls
@@ -16,7 +11,9 @@ class HandleSongRequest():
         # strip the qoutes
         filename = filename.strip("\"")
         filename = filename.strip("%22")
-        pls.playLocalFileSystem(filename)
+        playProcess = multiprocessing.Process(target=pls.playLocalFileSystem, args=[filename])
+        playProcess.start()
+        playProcesss.join()
         # print(f"Playing song: {filename}")
 
 
